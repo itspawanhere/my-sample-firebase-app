@@ -4,24 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Basics</title>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyBMKcchU3jqyCy1F-ceV66R7oyHbHbglcI",
-        authDomain: "something-unique-64d2c.firebaseapp.com",
-        projectId: "something-unique-64d2c",
-        storageBucket: "something-unique-64d2c.appspot.com",
-        messagingSenderId: "83690946440",
-        appId: "1:83690946440:web:d3ac40c05b716104ac843d",
-        measurementId: "G-BEQSKFNBFE",
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="app.js" defer></script>
+    <script src="app.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -48,10 +31,8 @@
 
     <section>
       <h2>My Firestore Things</h2>
-        <ul id="thingsList">
-
-        </ul>
-        <button id="createThing" class="btn btn-success">Create Random Thing</button>
+      <ul id="thingsList"></ul>
+      <button id="createThing" class="btn btn-success">Create Random Thing</button>
     </section>
   </body>
 </html>
