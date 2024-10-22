@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Basics</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBMKcchU3jqyCy1F-ceV66R7oyHbHbglcI",
+        authDomain: "something-unique-64d2c.firebaseapp.com",
+        projectId: "something-unique-64d2c",
+        storageBucket: "something-unique-64d2c.appspot.com",
+        messagingSenderId: "83690946440",
+        appId: "1:83690946440:web:d3ac40c05b716104ac843d",
+        measurementId: "G-BEQSKFNBFE",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+      integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>My Awesome App</h1>
+    <section id="whenSignedOut">
+      <button id="signInBtn" class="btn btn-primary">
+        Sign in with Google
+      </button>
+    </section>
+    <section id="whenSignedIn" hidden="true">
+      <div id="userDetails"></div>
+      <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+    </section>
+
+    <section>
+      <h2>My Firestore Things</h2>
+        <ul id="thingsList">
+
+        </ul>
+        <button id="createThing" class="btn btn-success">Create Random Thing</button>
+    </section>
+  </body>
+</html>
